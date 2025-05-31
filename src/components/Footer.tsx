@@ -3,29 +3,29 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-gray-900 text-white">
+    <footer id="contact" className="bg-gray-900 text-white border-t border-gray-800">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-purple-600 rounded-lg flex items-center justify-center animate-glow">
                 <span className="text-white font-bold text-lg">N</span>
               </div>
-              <span className="text-2xl font-bold">NEST</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">NEST</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Automatize seu atendimento com inteligência artificial e transforme 
               a experiência dos seus clientes.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-purple-500 transition-all border border-gray-700">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-purple-500 transition-all border border-gray-700">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-purple-500 transition-all border border-gray-700">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -33,25 +33,25 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold">Links Rápidos</h3>
+            <h3 className="text-xl font-semibold text-white">Links Rápidos</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#home" className="text-gray-400 hover:text-primary-400 transition-colors">
                   Início
                 </a>
               </li>
               <li>
-                <a href="#features" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#features" className="text-gray-400 hover:text-primary-400 transition-colors">
                   Funcionalidades
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#testimonials" className="text-gray-400 hover:text-primary-400 transition-colors">
                   Depoimentos
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#pricing" className="text-gray-400 hover:text-primary-400 transition-colors">
                   Planos
                 </a>
               </li>
@@ -60,7 +60,7 @@ const Footer = () => {
 
           {/* Solutions */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold">Soluções</h3>
+            <h3 className="text-xl font-semibold text-white">Soluções</h3>
             <ul className="space-y-3">
               <li className="text-gray-400">Clínicas e Consultórios</li>
               <li className="text-gray-400">Salões de Beleza</li>
@@ -72,7 +72,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold">Contato</h3>
+            <h3 className="text-xl font-semibold text-white">Contato</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-primary-400" />
@@ -97,10 +97,10 @@ const Footer = () => {
               © 2024 NEST. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
                 Termos de Uso
               </a>
             </div>

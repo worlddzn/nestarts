@@ -27,17 +27,17 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             O que nossos
-            <span className="bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">
               {" "}clientes dizem{" "}
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Histórias reais de empresas que transformaram seus resultados com a NEST
           </p>
         </div>
@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:shadow-lg hover:shadow-primary-500/20 transition-all duration-300 transform hover:-translate-y-1 border border-gray-700"
             >
               {/* Stars */}
               <div className="flex space-x-1 mb-6">
@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Content */}
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 "{testimonial.content}"
               </p>
 
@@ -66,13 +66,13 @@ const TestimonialsSection = () => {
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
+                  className="w-12 h-12 rounded-full object-cover ring-2 ring-primary-500/50"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-900">
+                  <h4 className="font-semibold text-white">
                     {testimonial.name}
                   </h4>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-400 text-sm">
                     {testimonial.role}
                   </p>
                 </div>
@@ -83,19 +83,19 @@ const TestimonialsSection = () => {
 
         {/* Trust Indicators */}
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-8">Empresas que confiam na NEST:</p>
+          <p className="text-gray-400 mb-8">Empresas que confiam na NEST:</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="bg-gray-200 h-12 w-32 rounded flex items-center justify-center">
-              <span className="text-gray-600 font-semibold">Clínica +</span>
+            <div className="bg-gray-800 h-12 w-32 rounded flex items-center justify-center border border-gray-700">
+              <span className="text-gray-400 font-semibold">Clínica +</span>
             </div>
-            <div className="bg-gray-200 h-12 w-32 rounded flex items-center justify-center">
-              <span className="text-gray-600 font-semibold">Salão Pro</span>
+            <div className="bg-gray-800 h-12 w-32 rounded flex items-center justify-center border border-gray-700">
+              <span className="text-gray-400 font-semibold">Salão Pro</span>
             </div>
-            <div className="bg-gray-200 h-12 w-32 rounded flex items-center justify-center">
-              <span className="text-gray-600 font-semibold">Pet Care</span>
+            <div className="bg-gray-800 h-12 w-32 rounded flex items-center justify-center border border-gray-700">
+              <span className="text-gray-400 font-semibold">Pet Care</span>
             </div>
-            <div className="bg-gray-200 h-12 w-32 rounded flex items-center justify-center">
-              <span className="text-gray-600 font-semibold">Barber Style</span>
+            <div className="bg-gray-800 h-12 w-32 rounded flex items-center justify-center border border-gray-700">
+              <span className="text-gray-400 font-semibold">Barber Style</span>
             </div>
           </div>
         </div>

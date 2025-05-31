@@ -55,22 +55,22 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-20 bg-gray-50">
+    <section id="pricing" className="py-20 bg-gray-800">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Planos que se adaptam ao
-            <span className="bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">
               {" "}seu negócio{" "}
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Escolha o plano ideal e comece a transformar seu atendimento hoje mesmo
           </p>
           
           {/* Special Offer Banner */}
-          <div className="bg-gradient-to-r from-primary-500 to-primary-700 text-white rounded-lg p-4 max-w-2xl mx-auto mb-8">
+          <div className="bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-lg p-4 max-w-2xl mx-auto mb-8 shadow-lg shadow-primary-500/20">
             <div className="flex items-center justify-center space-x-2">
               <Crown size={20} />
               <span className="font-semibold">Oferta Especial:</span>
@@ -84,15 +84,15 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 transform hover:scale-105 ${
+              className={`bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg transition-all duration-300 transform hover:scale-105 border ${
                 plan.highlighted
-                  ? 'ring-2 ring-primary-500 relative'
-                  : 'hover:shadow-xl'
+                  ? 'ring-2 ring-primary-500 relative border-primary-500 shadow-primary-500/20'
+                  : 'hover:shadow-xl border-gray-700 hover:shadow-primary-500/10'
               }`}
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-primary-500 text-white px-4 py-2 rounded-full flex items-center space-x-1">
+                  <div className="bg-gradient-to-r from-primary-500 to-purple-500 text-white px-4 py-2 rounded-full flex items-center space-x-1 shadow-lg">
                     <Star size={16} />
                     <span className="text-sm font-semibold">Mais Popular</span>
                   </div>
@@ -101,15 +101,15 @@ const PricingSection = () => {
 
               {/* Plan Header */}
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-white mb-2">
                   {plan.name}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   {plan.description}
                 </p>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">R$ {plan.price}</span>
-                  <span className="text-gray-600">/{plan.period}</span>
+                  <span className="text-4xl font-bold text-white">R$ {plan.price}</span>
+                  <span className="text-gray-400">/{plan.period}</span>
                 </div>
               </div>
 
@@ -117,10 +117,10 @@ const PricingSection = () => {
               <div className="space-y-4 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Check size={12} className="text-primary-600" />
+                    <div className="w-5 h-5 bg-gradient-to-r from-primary-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Check size={12} className="text-white" />
                     </div>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-300">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -129,8 +129,8 @@ const PricingSection = () => {
               <Button
                 className={`w-full py-3 text-lg font-semibold transition-all duration-300 ${
                   plan.highlighted
-                    ? 'bg-primary-500 hover:bg-primary-600 text-white'
-                    : 'bg-gray-100 hover:bg-primary-50 text-gray-900 hover:text-primary-600 border border-gray-200'
+                    ? 'bg-gradient-to-r from-primary-500 to-purple-500 hover:from-primary-600 hover:to-purple-600 text-white shadow-lg shadow-primary-500/25'
+                    : 'bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white border border-gray-600'
                 }`}
               >
                 {plan.cta}
@@ -140,28 +140,28 @@ const PricingSection = () => {
         </div>
 
         {/* Annual Plan CTA */}
-        <div className="mt-16 bg-gradient-to-r from-primary-500 to-primary-700 rounded-2xl p-8 md:p-12 text-white text-center">
+        <div className="mt-16 bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl shadow-primary-500/20">
           <h3 className="text-3xl font-bold mb-4">
             🎁 Oferta Especial: Plano Anual
           </h3>
-          <p className="text-xl mb-6 text-primary-100">
+          <p className="text-xl mb-6 text-purple-100">
             Contrate qualquer plano anual e ganhe:
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
-            <div className="bg-white/10 rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <h4 className="text-xl font-semibold mb-2">🌐 Site Personalizado</h4>
-              <p className="text-primary-100">
+              <p className="text-purple-100">
                 Site profissional completo, responsivo e otimizado para seu negócio
               </p>
             </div>
-            <div className="bg-white/10 rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <h4 className="text-xl font-semibold mb-2">👨‍💼 Consultoria Gratuita</h4>
-              <p className="text-primary-100">
+              <p className="text-purple-100">
                 Acompanhamento especializado para maximizar seus resultados
               </p>
             </div>
           </div>
-          <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
+          <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg">
             Garantir Oferta Anual
           </Button>
         </div>
