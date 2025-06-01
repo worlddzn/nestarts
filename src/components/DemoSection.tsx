@@ -1,7 +1,7 @@
-
 import { MessageCircle, Bot, User, Clock, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { exportSiteData } from "@/utils/exportData";
 
 const demoScenarios = [
   {
@@ -172,6 +172,16 @@ const DemoSection = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Nossa IA conversa naturalmente com seus clientes, agenda horários e responde dúvidas 24/7
           </p>
+          
+          {/* Export Button */}
+          <div className="mt-6">
+            <button
+              onClick={exportSiteData}
+              className="bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 border border-gray-600"
+            >
+              📥 Exportar Dados (JSON)
+            </button>
+          </div>
         </div>
 
         {/* Carousel Indicators */}
