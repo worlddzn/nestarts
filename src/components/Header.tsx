@@ -16,7 +16,7 @@ const Header = () => {
               <span className="text-white font-bold text-lg">N</span>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-              NEST
+              NEST ARTS
             </span>
           </div>
 
